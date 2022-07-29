@@ -13,8 +13,8 @@ public class Hello_World_Game extends ApplicationAdapter {
 	float circleX = 200f;
 	float circleY = 100f;
 
-	float xVel = 2f;
-	float yVel = 1f;
+	float xVel = 120f;
+	float yVel = 60f;
 
 	@Override
 	public void create () {
@@ -24,8 +24,8 @@ public class Hello_World_Game extends ApplicationAdapter {
 	@Override
 	public void render () {
 		//Animação:
-		circleX += xVel;
-		circleY += yVel;
+		circleX += xVel * Gdx.graphics.getDeltaTime();
+		circleY += yVel * Gdx.graphics.getDeltaTime();
 		if(circleX < 0 || circleX > Gdx.graphics.getWidth()){xVel *= -1;}
 		if(circleY < 0 || circleY > Gdx.graphics.getHeight()){yVel *= -1;}
 
