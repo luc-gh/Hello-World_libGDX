@@ -3,17 +3,19 @@ package com.libgdx.hello;
 import com.badlogic.gdx.ApplicationAdapter;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL20;
-import com.badlogic.gdx.graphics.g2d.BitmapFont;
-import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
-import com.badlogic.gdx.utils.ScreenUtils;
 
-//Desenhos são feitos com OpenGL (Open Graphics Library)
-//Classe ShapeRenderer vai ser usadas para este jogo simples, mas existem renderizadores mais avançados em libGDX
+//A animação requer 2 ações básicas (podem haver mais): armazenar estados e atualiza-los conforme o tempo
 
 public class Hello_World_Game extends ApplicationAdapter {
 	ShapeRenderer shape;
-	
+
+	float circleX = 200f;
+	float circleY = 100f;
+
+	float xVel = 2f;
+	float yVel = 1f;
+
 	@Override
 	public void create () {
 		shape = new ShapeRenderer();
@@ -21,12 +23,18 @@ public class Hello_World_Game extends ApplicationAdapter {
 
 	@Override
 	public void render () {
+		//Animação:
+		circleX += xVel;
+		circleY += yVel;
+		if(circleX < 0 || circleX > Gdx.graphics.getWidth()){xVel *= -1;}
+		if(circleY < 0 || circleY > Gdx.graphics.getHeight()){yVel *= -1;}
+
 		Gdx.gl.glClearColor(.25f,.25f,.25f,1); //Determina cor de fundo (usando classe Gdx)
 		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
-		//Desenhando círculo na tela, com os parâmetros:
+
 		shape.begin(ShapeRenderer.ShapeType.Filled); //tipo
-		shape.setColor(0,1,0,1);         //cor (verde)
-		shape.circle(200,100,75);        //posição e raio
+		shape.setColor(0,1,0,1); //cor (verde)
+		shape.circle(circleX, circleY,75); //posição e raio
 		shape.end();
 	}
 
