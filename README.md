@@ -5,7 +5,7 @@
 <div>
   <h4>Modificações no arquivo <code>Hello_World_Game.java</code> por commit:</h4>
   <table align="center">
-    <tr><td><a href="https://github.com/luc-gh/Hello-World_libGDX/commit/685c3ec07d2a894679eb26405e1878d954c1f1dc?diff=unified">
+    <tr><td><a href="https://github.com/luc-gh/Hello-World_libGDX/blob/685c3ec07d2a894679eb26405e1878d954c1f1dc/core/src/com/libgdx/hello/Hello_World_Game.java">
     <b>Commit 1 — Mensagem de texto</b></a></td>
     <td>Upload inicial e do executável 
     (<a href="https://github.com/luc-gh/Hello-World_libGDX/blob/master/desktop/src/com/libgdx/hello/DesktopLauncher.java">DesktopLauncher.java</a>) 
