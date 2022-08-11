@@ -25,41 +25,35 @@
 
 <div>
   <h3>Lógica do projeto</h3>
+  <p>LibGDX é um framework de desenvolvimento de jogos que oferece vários recursos úteis (um loop de renderização de 60 fps, animação,
+  entrada, física e iluminação, por exemplo) e permite que você implante como um executável em desktops, uma página HTML/JavaScript ou 
+  um Aplicativo para Android ou iOS.</p>
+  <p>Um projeto libGDX é, na verdade, vários projetos: um projeto principal que contém toda a lógica do seu jogo e, em seguida, 
+  projetos específicos de plataforma que apontam para seu projeto principal e podem ser implantados em uma plataforma específica.</p>
+  <p>A configuração do espaço de trabalho para desenvolver com libGDX depende da IDE utilizada para programar em Java, da versão do Gerador 
+  de projetos libGDX e das configurações do ambiente computacional utilizado, mas as etapas de criação do projetos em si, são:</p>
   <ul>
-    <li>Introdução</li>
-    <ul>
-      <li>
-        LibGDX é um framework de desenvolvimento de jogos que oferece vários recursos úteis (um loop de renderização de 60 fps, animação,
-        entrada, física e iluminação, por exemplo) e permite que você implante como um executável em desktops, uma página HTML/JavaScript ou 
-        um Aplicativo para Android ou iOS.
-      </li>
-      <li>
-        Um projeto libGDX é, na verdade, vários projetos: um projeto principal que contém toda a lógica do seu jogo e, em seguida, 
-        projetos específicos de plataforma que apontam para seu projeto principal e podem ser implantados em uma plataforma específica.
-      </li>
-      <li>
-        A configuração do espaço de trabalho para desenvolver com libGDX depende da IDE utilizada para programar em Java, da versão do Gerador 
-        de projetos libGDX e das configurações do ambiente computacional utilizado, mas as etapas de criação do projetos em si, são: <br>
-        – &nbsp Abrir o Gerador;<br>
-        – &nbsp Definir o nome do projeto, da classe principal e do pacote;<br>
-        – &nbsp Definir o local do projeo no arquivos;<br>
-        – &nbsp Definir os projetos secundários (específicos para cada plataforma);<br>
-        – &nbsp Escolher as extensões que serão utilizadas;<br>
-        – &nbsp Gerar e abrir o projeto no ambiente preferível.<br>
-      </li>
-    </ul>
-    <li>
-      Tendo o ambiente configurado, é preciso entender que libGDX utiliza funções cíclicas (Lifecycle functions) que são acionadas quando um evento 
-      ocorre na execução.<br>
-      Para vincular tais funções, a classe principal deve extender <code>[extends]</code> a classe ApplicationAdapter ou implementar 
-      <code>[implements]</code> a classe ApplicationListener para sobrescrever (@Override):
-      <ul><li><code> create() </code></li>
-      <li><code> resize(int width, int height) </code></li>
-      <li><code> render() </code></li>
-      <li><code> pause() </code></li>
-      <li><code> resume() </code></li>
-      <li><code> dispose() </code></li></ul>
-    </li>
+    <li> Abrir o Gerador;</li>
+    <li> Definir o nome do projeto, da classe principal e do pacote;</li>
+    <li> Definir o local do projeo no arquivos;</li>
+    <li> Definir os projetos secundários (específicos para cada plataforma);</li>
+    <li> Escolher as extensões que serão utilizadas;</li>
+    <li> Gerar e abrir o projeto no ambiente preferível.</li>
+  </ul>
+  <p>Tendo o ambiente configurado, é preciso entender que libGDX utiliza funções cíclicas (Lifecycle functions) que são acionadas quando um evento 
+  ocorre na execução.</p>
+  <p>Para vincular tais funções, a classe principal deve extender <code>[extends]</code> a classe ApplicationAdapter ou implementar 
+  <code>[implements]</code> a classe ApplicationListener para sobrescrever (@Override):</p>
+  <ul>
+    <li><code> create() </code></li>
+    <li><code> resize(int width, int height) </code></li>
+    <li><code> render() </code></li>
+    <li><code> pause() </code></li>
+    <li><code> resume() </code></li>
+    <li><code> dispose() </code></li>
+  </ul>
+  <p>Diante disso, a estrutura do projeto é a seguinte:</p>
+  <ul>
     <li>
       O projeto principal contém a classe que estende ApplicationAdapter e os projetos específicos da 
       plataforma instanciam essa classe para criar um aplicativo.<br>
