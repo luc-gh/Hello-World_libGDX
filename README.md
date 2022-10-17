@@ -22,7 +22,8 @@
     <td>Atualização do arquivo principal para que o movimento do círculo esteja compatível com o FPS</td></tr>
   </table>  
 </div>
-
+<p>&nbsp</p>
+<h2></h2>
 <div>
   <h3>Lógica do projeto</h3>
   <p>LibGDX é um framework de desenvolvimento de jogos que oferece vários recursos úteis (um loop de renderização de 60 fps, animação,
