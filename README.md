@@ -2,7 +2,7 @@
 <p>Este repositório possui os arquivos para criar um jogo muito básico em Java, para apresentar conceitos, classes e funções usadas pelo framework libGDX.</p>
 <p>Os códigos presentes aqui e em outros repositórios <a href="https://github.com/stars/luc-gh/lists/estudo-sobre-o-framework-libgdx"><i>desta lista</i></a>, foram produzidos com base no tutorial da Happy Coding, que você pode acessar <a href="https://happycoding.io/tutorials/libgdx/hello-world"><b>aqui</b></a>.</p>
 <h2></h2>
-<h3>Tabela de commits</h3>
+<h3 align="center">Tabela de commits</h3>
 <div>
   <table align="center">
     <thead align="center"><th colspan="2">Modificações no arquivo <code>Hello_World_Game.java</code> por commit</th></thead>
